@@ -1,0 +1,62 @@
+:root{
+
+    --myblue:rgb(189, 246, 255);
+    --myyellow:rgb(200, 206, 166);
+    --mygreen: rgb(6, 73, 38);
+    --myred:rgb(255, 0, 0);
+    --gridtype: grid;
+    --Quartercolums:25 25 25 25; 
+    --fullwidth:100%;
+    --grid-template-columns:25 25 25 25;
+    
+
+}
+
+body{
+    background-color:var(--myblue)
+}
+
+#grid-container{
+    display: var(--gridtype);
+    width: var(--fullwidth);
+    height: 70%;
+    background-color:var(--myblue);
+    border: 2px solid var(--myyellow);
+    grid-template-columns: var(--grid-template-columns);
+
+}
+
+.grid-element{
+    border: 1px solid black;
+    margin: 5px;
+}
+
+.grid-element:hover{
+    background-color:var(--myred);
+
+}
+
+.green-box:hover{
+    background-color:var(--mygreen)
+}
+
+.Yellow-box:hover{
+    background-color: var(--myyellow);
+}
+
+
+@media (max-width:1000px){
+    #grid-container{
+        grid-template-columns: 50 50%;
+        height: 175%;
+    }
+    .grid-element{
+        font-size: 24px;
+    }
+}
+
+@media (max-height:300px){
+    .grid-element{
+        font-size: 12px;
+    }
+}
